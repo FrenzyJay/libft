@@ -6,24 +6,28 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/16 04:50:02 by garm             ###   ########.fr        #
+#    Updated: 2014/03/16 13:43:59 by garm             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
-CC = 			gcc
-NAME = 			libft.a
-CFLAGS = 		-Wall -Werror -Wextra
-CFLAGS += 		-I includes
+CC =			gcc
+NAME =			libft.a
+CFLAGS =		-Wall -Werror -Wextra
+CFLAGS +=		-I includes
+
 SRCS =			puts/ft_putchar.c \
 				puts/ft_putstr.c \
 				puts/ft_putendl.c \
-				puts/ft_error.c
-OBJ = 			$(SRCS:.c=.o)
+				puts/ft_error.c \
+				strings/ft_strlen.c \
+				strings/ft_strncmp.c
 
-TESTNAME = 		a.out
-TEST = 			test/main.c
-TESTOBJ = 		$(TEST:.c=.o)
-LIB = 			-L. -lft
+OBJ =			$(SRCS:.c=.o)
+
+TESTNAME =		a.out
+TEST =			test/main.c
+TESTOBJ =		$(TEST:.c=.o)
+LIB =			-L. -lft
 
 all: $(NAME)
 
