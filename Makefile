@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/02/23 20:25:44 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/16 04:50:02 by garm             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -28,9 +28,6 @@ LIB = 			-L. -lft
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
-
-printf/%.o: printf/%.c
 	$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 
 $(NAME): $(OBJ)
