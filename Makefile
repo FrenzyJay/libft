@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/02/23 20:25:44 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/17 16:59:11 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,7 +17,8 @@ CFLAGS += 		-I includes
 SRCS =			puts/ft_putchar.c \
 				puts/ft_putstr.c \
 				puts/ft_putendl.c \
-				puts/ft_error.c
+				puts/ft_error.c \
+				strings/ft_strdup.c
 OBJ = 			$(SRCS:.c=.o)
 
 TESTNAME = 		a.out
