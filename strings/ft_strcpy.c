@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 11:54:58 by garm              #+#    #+#             */
-/*   Updated: 2014/03/17 23:41:08 by garm             ###   ########.fr       */
+/*   Created: 2013/11/19 11:39:30 by garm              #+#    #+#             */
+/*   Updated: 2014/03/17 23:50:58 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, unsigned long n)
+char	*ft_strcpy(char *s1, const char *s2)
 {
-	unsigned long	i;
+	int		i;
+	char	*ret;
 
+	ret = s1;
 	i = 0;
-	if (!s1)
-		s1 = "";
-	if (!s2)
-		s2 = "";
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	if (!s1 || !s2)
+		return (NULL);
+	while (s2[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		ret[i] = s2[i];
 		i++;
 	}
-	return (0);
+	ret[i] = '\0';
+	return (ret);
 }
 
