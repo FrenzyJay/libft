@@ -8,6 +8,7 @@ int				ft_putendl(const char *str);
 int				ft_putstr(const char *str);
 int				ft_putchar(const int c);
 int				ft_error(const char *str);
+void			ft_putnbr(int num);
 
 /*
 ** STRINGS
