@@ -14,6 +14,7 @@ int				ft_error(const char *str);
 */
 int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
 unsigned long	ft_strlen(const char *str);
+char			*ft_strdup(const char *src);
 char			*ft_strcpy(char *s1, const char *s2);
 char			*ft_strncpy(char *s1, const char *s2, unsigned long n);
 char			*ft_strnew(unsigned long size);

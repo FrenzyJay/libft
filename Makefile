@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/18 06:13:55 by garm             ###   ########.fr        #
+#    Updated: 2014/03/18 08:12:59 by garm             ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,6 +20,7 @@ SRCS =			puts/ft_putchar.c \
 				puts/ft_putendl.c \
 				puts/ft_error.c \
 				strings/ft_strlen.c \
+				strings/ft_strdup.c \
 				strings/ft_strncmp.c \
 				strings/ft_strcpy.c \
 				strings/ft_strncpy.c \
