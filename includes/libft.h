@@ -16,6 +16,12 @@ int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
 unsigned long	ft_strlen(const char *str);
 char			*ft_strcpy(char *s1, const char *s2);
 char			*ft_strncpy(char *s1, const char *s2, unsigned long n);
+char			*ft_strnew(unsigned long size);
+void			ft_strdel(char **as);
+unsigned long	ft_strlenc(const char *str, char c);
+char			*ft_strsub(char const *s, unsigned long start, unsigned long n);
+char			*ft_strncat(char *s1, const char *s2, unsigned long n);
+int				ft_strcountc(char const *str, char c);
 
 /*
 ** MEMORY
