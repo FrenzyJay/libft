@@ -18,7 +18,12 @@ SRCS =			puts/ft_putchar.c \
 				puts/ft_putstr.c \
 				puts/ft_putendl.c \
 				puts/ft_error.c \
-				strings/ft_strdup.c
+				strings/ft_strdup.c \
+				strings/ft_strnew.c \
+				strings/ft_strlen.c \
+				strings/ft_strjoin.c \
+				strings/ft_strncmp.c \
+				memory/ft_bzero.c
 OBJ = 			$(SRCS:.c=.o)
 
 TESTNAME = 		a.out

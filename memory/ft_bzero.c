@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/17 16:58:42 by jvincent         ###   ########.fr       */
+/*   Created: 2013/11/20 23:00:40 by jvincent          #+#    #+#             */
+/*   Updated: 2013/12/07 11:13:48 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include <string.h>
 
-char	*ft_strdup(char *src)
+void	ft_bzero(void *s, size_t len)
 {
-	int		length;
-	int		i;
-	char	*dest;
+	size_t	ktr;
 
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	length = i;
-	i = 0;
-	if ((dest = (char *)malloc(length)) != NULL)
+	if (s)
 	{
-		dest[length - 1] = '\0';
-		while (i < length)
+		ktr = 0;
+		while (ktr < len)
 		{
-			dest[i] = src[i];
-			i++;
+			*(char*) (s + ktr) = 0;
+			ktr = ktr + 1;
 		}
-		return (dest);
 	}
-	else
-		return (NULL);
 }
 
