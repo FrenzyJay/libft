@@ -6,7 +6,7 @@
 /*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/08/22 05:14:20 by garm              #+#    #+#             */
-/*   Updated: 2013/12/08 16:34:43 by garm             ###   ########.fr       */
+/*   Updated: 2014/03/23 09:47:14 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(const char *src)
 	i = 0;
 	if ((dest = (char*)malloc(length)))
 	{
-		while (i <= length)
+		while (i < length)
 		{
 			dest[i] = src[i];
 			i++;
