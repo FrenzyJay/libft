@@ -9,6 +9,7 @@
 int		ft_putendl(const char *str);
 int		ft_putstr(const char *str);
 int		ft_putchar(const int c);
+int		ft_putnbr(int n);
 int		ft_error(const char *str);
 
 /*

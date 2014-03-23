@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/17 16:59:11 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/23 15:55:21 by llapillo         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,6 +17,7 @@ CFLAGS += 		-I includes
 SRCS =			puts/ft_putchar.c \
 				puts/ft_putstr.c \
 				puts/ft_putendl.c \
+				puts/ft_putnbr.c \
 				puts/ft_error.c \
 				strings/ft_strdup.c \
 				strings/ft_strnew.c \
