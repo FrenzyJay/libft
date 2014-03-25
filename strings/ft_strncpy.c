@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jibanez <jibanez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 14:09:04 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:17:18 by jibanez          ###   ########.fr       */
+/*   Created: 2013/11/19 17:44:00 by jibanez           #+#    #+#             */
+/*   Updated: 2013/12/06 19:49:36 by jibanez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	char	*strnew;
+	unsigned int	i;
+	unsigned int	len;
 
-	strnew = (char *) malloc(size + 1);
-	if (!strnew)
-		return (NULL);
-	ft_bzero((void *) strnew, size + 1);
-	return (strnew);
+	len = ft_strlen(src);
+	i = 0;
+	while (i < n)
+	{
+		if (i > len)
+			dest[i] = '\0';
+		else
+			dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
-

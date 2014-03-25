@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/25 16:41:16 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/25 17:53:43 by jibanez          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -24,7 +24,10 @@ SRCS =			io/ft_putchar.c \
 				strings/ft_strlen.c \
 				strings/ft_strjoin.c \
 				strings/ft_strncmp.c \
-				memory/ft_bzero.c
+				strings/ft_strncpy.c \
+				strings/ft_strdel.c \
+				memory/ft_bzero.c \
+				checks/ft_isprint.c
 OBJ = 			$(SRCS:.c=.o)
 
 TESTNAME = 		a.out

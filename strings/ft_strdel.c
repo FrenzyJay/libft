@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jibanez <jibanez@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 14:09:04 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:17:18 by jibanez          ###   ########.fr       */
+/*   Created: 2013/11/22 14:12:27 by jibanez           #+#    #+#             */
+/*   Updated: 2013/12/31 13:04:18 by jibanez          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
-#include "libft.h"
 
-char	*ft_strnew(size_t size)
+void	ft_strdel(char **as)
 {
-	char	*strnew;
-
-	strnew = (char *) malloc(size + 1);
-	if (!strnew)
-		return (NULL);
-	ft_bzero((void *) strnew, size + 1);
-	return (strnew);
+	if (as)
+	{
+		free(*as);
+		*as = NULL;
+		as = NULL;
+	}
 }
-
