@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
+/*   Updated: 2014/03/25 18:34:46 by jvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -35,6 +47,11 @@ void			ft_bzero(void *s, size_t len);
 void			*ft_memset(void *b, int c, unsigned long len);
 void			*ft_memalloc(unsigned long size);
 void			ft_memdel(void **ap);
+
+/*
+** CHECKS
+*/
+int		ft_isprint(int c);
 
 #endif /* !LIBFT_H */
 

@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/25 18:12:26 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/25 18:35:37 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,6 +37,7 @@ SRCS =			strings/ft_strlen.c \
 				io/ft_putchar.c \
 				io/ft_putnbr.c \
 				io/ft_error.c \
+				checks/ft_isprint.c
 
 OBJ =			$(SRCS:.c=.o)
 

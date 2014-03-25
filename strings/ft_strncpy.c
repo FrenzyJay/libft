@@ -6,26 +6,28 @@
 /*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 11:40:08 by garm              #+#    #+#             */
-/*   Updated: 2014/03/17 23:42:45 by garm             ###   ########.fr       */
+/*   Updated: 2014/03/25 18:32:20 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strncpy(char *s1, const char *s2, unsigned long n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned int	len;
 
+	len = ft_strlen(src);
 	i = 0;
-	if (!s1 || !s2)
-		return (s1);
-	ft_bzero(s1, n);
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	while (i < n)
 	{
-		s1[i] = s2[i];
+		if (i > len)
+			dest[i] = '\0';
+		else
+			dest[i] = src[i];
 		i++;
 	}
-	return (s1);
+	return (dest);
 }
 
