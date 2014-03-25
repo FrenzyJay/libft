@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/25 14:09:04 by jvincent          #+#    #+#             */
-/*   Updated: 2013/12/08 16:46:06 by jvincent         ###   ########.fr       */
+/*   Updated: 2014/03/25 18:06:56 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnew(size_t size)
 {
 	char	*strnew;
 
-	strnew = (char *) malloc(size);
+	strnew = (char *)malloc(size);
 	if (!strnew)
 		return (NULL);
-	ft_bzero((void *) strnew, size);
+	ft_bzero((void *)strnew, size);
 	return (strnew);
 }
 
