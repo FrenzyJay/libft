@@ -19,19 +19,15 @@ SRCS =			puts/ft_putchar.c \
 				puts/ft_putstr.c \
 				puts/ft_putendl.c \
 				puts/ft_error.c \
-				puts/ft_putnbr.c \
 				strings/ft_strlen.c \
-				strings/ft_strdup.c \
 				strings/ft_strncmp.c \
 				strings/ft_strcpy.c \
 				strings/ft_strncpy.c \
-				strings/ft_strnew.c \
 				strings/ft_strdel.c \
 				strings/ft_strlenc.c \
 				strings/ft_strsub.c \
 				strings/ft_strncat.c \
 				strings/ft_strcountc.c \
-				memory/ft_bzero.c \
 				memory/ft_memset.c \
 				memory/ft_memalloc.c \
 				memory/ft_memdel.c \
