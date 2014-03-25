@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/23 15:55:21 by llapillo         ###   ########.fr        #
+#    Updated: 2014/03/25 16:41:16 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,11 +14,11 @@ CC = 			gcc
 NAME = 			libft.a
 CFLAGS = 		-Wall -Werror -Wextra
 CFLAGS += 		-I includes
-SRCS =			puts/ft_putchar.c \
-				puts/ft_putstr.c \
-				puts/ft_putendl.c \
-				puts/ft_putnbr.c \
-				puts/ft_error.c \
+SRCS =			io/ft_putchar.c \
+				io/ft_putstr.c \
+				io/ft_putendl.c \
+				io/ft_putnbr.c \
+				io/ft_error.c \
 				strings/ft_strdup.c \
 				strings/ft_strnew.c \
 				strings/ft_strlen.c \
