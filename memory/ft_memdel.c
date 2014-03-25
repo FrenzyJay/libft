@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/08/21 01:29:44 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 17:49:41 by garm             ###   ########.fr       */
+/*   Created: 2013/11/25 18:24:27 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 00:34:50 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_memdel(void **ap)
 {
-	size_t	kount;
-
-	kount = 0;
-	while (str && str[kount])
-		kount++;
-	return (kount);
+	if (!ap || !*ap)
+		return ;
+	free(*ap);
+	*ap = NULL;
 }
 

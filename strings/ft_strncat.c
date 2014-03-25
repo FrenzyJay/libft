@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:03:39 by garm             ###   ########.fr       */
+/*   Created: 2013/11/19 13:21:25 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 06:17:52 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strncat(char *s1, const char *s2, unsigned long n)
 {
-	int		i;
-	char	*dest;
+	unsigned long	i;
+	unsigned long	j;
 
 	i = 0;
-	if (!src)
-		return (NULL);
-	while (src[i] != '\0')
+	j = 0;
+	if (!s1 || !s2)
+		return (s1);
+	while (s1[i] != '\0')
 		i++;
-	if ((dest = (char *)malloc(i + 1)) != NULL)
+	while (j < n && s2[j] != '\0')
 	{
-		dest[i] = '\0';
-		i--;
-		while (i >= 0)
-		{
-			dest[i] = src[i];
-			i--;
-		}
-		return (dest);
+		s1[i] = s2[j];
+		i++;
+		j++;
 	}
-	return (NULL);
+	s1[i] = '\0';
+	return (s1);
 }
 

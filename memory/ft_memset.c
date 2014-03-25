@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:03:39 by garm             ###   ########.fr       */
+/*   Created: 2013/11/21 17:47:13 by garm              #+#    #+#             */
+/*   Updated: 2014/03/17 23:53:29 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_memset(void *b, int c, unsigned long len)
 {
-	int		i;
-	char	*dest;
+	unsigned long	i;
+	unsigned char	*str;
 
-	i = 0;
-	if (!src)
+	if (!b)
 		return (NULL);
-	while (src[i] != '\0')
-		i++;
-	if ((dest = (char *)malloc(i + 1)) != NULL)
+	i = 0;
+	str = (unsigned char*)b;
+	while (i < len)
 	{
-		dest[i] = '\0';
-		i--;
-		while (i >= 0)
-		{
-			dest[i] = src[i];
-			i--;
-		}
-		return (dest);
+		str[i] = c;
+		i++;
 	}
-	return (NULL);
+	return (str);
 }
 

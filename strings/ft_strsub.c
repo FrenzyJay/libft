@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/08/21 01:29:44 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 17:49:41 by garm             ###   ########.fr       */
+/*   Created: 2013/11/26 20:07:35 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 06:25:07 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strsub(char const *s, unsigned long start, unsigned long n)
 {
-	size_t	kount;
+	char	*ret;
 
-	kount = 0;
-	while (str && str[kount])
-		kount++;
-	return (kount);
+	while (start > 0)
+	{
+		s++;
+		start--;
+	}
+	if ((ret = (char*)malloc(n + 1)))
+	{
+		ret = ft_strncpy(ret, s, n);
+		ret[n] = '\0';
+	}
+	return (ret);
 }
 
