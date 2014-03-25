@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcountc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:03:39 by garm             ###   ########.fr       */
+/*   Created: 2013/11/27 23:46:46 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 06:26:00 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+int		ft_strcountc(char const *str, char c)
 {
 	int		i;
-	char	*dest;
+	int		ret;
 
 	i = 0;
-	if (!src)
-		return (NULL);
-	while (src[i] != '\0')
-		i++;
-	if ((dest = (char *)malloc(i + 1)) != NULL)
+	ret = 0;
+	while (*(str + i))
 	{
-		dest[i] = '\0';
-		i--;
-		while (i >= 0)
-		{
-			dest[i] = src[i];
-			i--;
-		}
-		return (dest);
+		if (*(str + i) == c)
+			ret++;
+		i++;
 	}
-	return (NULL);
+	return (ret);
 }
 

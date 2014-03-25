@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:03:39 by garm             ###   ########.fr       */
+/*   Created: 2013/11/25 18:13:36 by garm              #+#    #+#             */
+/*   Updated: 2014/03/17 23:48:04 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_memalloc(unsigned long size)
 {
-	int		i;
-	char	*dest;
+	void	*zone;
 
-	i = 0;
-	if (!src)
-		return (NULL);
-	while (src[i] != '\0')
-		i++;
-	if ((dest = (char *)malloc(i + 1)) != NULL)
+	zone = malloc(size);
+	if (zone != NULL)
 	{
-		dest[i] = '\0';
-		i--;
-		while (i >= 0)
-		{
-			dest[i] = src[i];
-			i--;
-		}
-		return (dest);
+		ft_bzero(zone, size);
+		return (zone);
 	}
 	return (NULL);
 }

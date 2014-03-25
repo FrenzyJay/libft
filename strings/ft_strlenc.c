@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlenc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/23 22:07:27 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:03:39 by garm             ###   ########.fr       */
+/*   Created: 2014/02/18 01:31:21 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 06:24:13 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+unsigned long	ft_strlenc(const char *str, char c)
 {
 	int		i;
-	char	*dest;
 
 	i = 0;
-	if (!src)
-		return (NULL);
-	while (src[i] != '\0')
+	if (!str)
+		return (i);
+	while (str[i] && str[i] != c)
 		i++;
-	if ((dest = (char *)malloc(i + 1)) != NULL)
-	{
-		dest[i] = '\0';
-		i--;
-		while (i >= 0)
-		{
-			dest[i] = src[i];
-			i--;
-		}
-		return (dest);
-	}
-	return (NULL);
+	return (i);
 }
 

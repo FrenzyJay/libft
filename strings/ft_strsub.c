@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/25 14:09:04 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:04:52 by garm             ###   ########.fr       */
+/*   Created: 2013/11/26 20:07:35 by garm              #+#    #+#             */
+/*   Updated: 2014/03/18 06:25:07 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strsub(char const *s, unsigned long start, unsigned long n)
 {
-	char	*strnew;
+	char	*ret;
 
-	strnew = (char *) malloc(size);
-	if (!strnew)
-		return (NULL);
-	ft_bzero((void *) strnew, size);
-	return (strnew);
+	while (start > 0)
+	{
+		s++;
+		start--;
+	}
+	if ((ret = (char*)malloc(n + 1)))
+	{
+		ret = ft_strncpy(ret, s, n);
+		ret[n] = '\0';
+	}
+	return (ret);
 }
 
