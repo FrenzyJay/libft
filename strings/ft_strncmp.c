@@ -3,28 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: garm <garm@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/22 13:21:44 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 17:48:58 by garm             ###   ########.fr       */
+/*   Created: 2013/11/20 11:54:58 by garm              #+#    #+#             */
+/*   Updated: 2013/12/08 16:37:39 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	kount;
+	size_t	i;
 
-	if (s1 && s2)
+	i = 0;
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		kount = 0;
-		while ((s1[kount] != '\0' || s2[kount] != '\0') && kount <= n)
-		{
-			if (s1[kount] != s2[kount])
-				return (s1[kount] - s2[kount]);
-			kount++;
-		}
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
 	return (0);
 }
