@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/26 02:36:47 by jvincent         ###   ########.fr       */
+/*   Updated: 2014/03/26 22:57:01 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char			*ft_strdup(char *dest);
 char			*ft_strnew(size_t size);
 void			ft_strdel(char **as);
 size_t			ft_strlen(char const *str);
-int				ft_strncmp(char *s1, char *s2, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strjoin(char const *str, char const *str2);
 char			*ft_strcpy(char *s1, const char *s2);
 char			*ft_strncpy(char *s1, const char *s2, unsigned long n);
