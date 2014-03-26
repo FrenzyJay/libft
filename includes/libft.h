@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/25 18:34:46 by jvincent         ###   ########.fr       */
+/*   Updated: 2014/03/26 02:36:47 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ unsigned long	ft_strlenc(const char *str, char c);
 char			*ft_strsub(char const *s, unsigned long start, unsigned long n);
 char			*ft_strncat(char *s1, const char *s2, unsigned long n);
 int				ft_strcountc(char const *str, char c);
+char			**ft_strsplit(const char *str, char c);
 
 /*
 ** MEMORY
