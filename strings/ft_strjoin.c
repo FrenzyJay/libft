@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/25 19:21:38 by jvincent          #+#    #+#             */
-/*   Updated: 2013/12/29 16:18:09 by jvincent         ###   ########.fr       */
+/*   Updated: 2014/03/26 21:45:58 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		slen1 = ft_strlen(s1);
 		slen2 = ft_strlen(s2);
-		if ((new = ft_strnew(slen1 + slen2 + 1)) == NULL)
+		if ((new = ft_strnew(slen1 + slen2)) == NULL)
 			return (NULL);
 		i = 0;
 		while (i < slen1 + slen2)
