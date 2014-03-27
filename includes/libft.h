@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/27 13:25:30 by jvincent         ###   ########.fr       */
+/*   Updated: 2014/03/27 16:39:55 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int				ft_putchar(const int c);
 int				ft_putnbr(int n);
 int				ft_printf(const char *format, ...)
 				__attribute__((format(printf, 1, 2)));
-int				ft_error(const char *str);
+int				ft_error(const char *msg, const char *bin);
 char			*ft_putnstr(const char *str, size_t n);
 
 /*
