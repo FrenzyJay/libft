@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/27 01:42:11 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/27 06:20:22 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,6 +20,7 @@ SRCS =			strings/ft_strlen.c \
 				strings/ft_strcpy.c \
 				strings/ft_strncpy.c \
 				strings/ft_strjoin.c \
+				strings/ft_strsplit.c \
 				strings/ft_strdel.c \
 				strings/ft_strlenc.c \
 				strings/ft_strsub.c \
