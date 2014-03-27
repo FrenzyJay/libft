@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/27 05:31:20 by garm             ###   ########.fr       */
+/*   Updated: 2014/03/27 13:25:30 by jvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int				ft_strcountc(char const *str, char c);
 int				ft_findc(const char *str, char c);
 char			*ft_itoa(int n);
 char			**ft_strsplit(const char *str, char c);
+int				ft_strequ(const char *str1, const char *str2);
 
 /*
 ** MEMORY
