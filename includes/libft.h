@@ -6,7 +6,7 @@
 /*   By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/25 18:34:08 by jvincent          #+#    #+#             */
-/*   Updated: 2014/03/26 22:54:48 by garm             ###   ########.fr       */
+/*   Updated: 2014/03/27 05:31:20 by garm             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int				ft_putendl(const char *str);
 int				ft_putstr(const char *str);
 int				ft_putchar(const int c);
 int				ft_putnbr(int n);
+int				ft_printf(const char *format, ...)
+				__attribute__((format(printf, 1, 2)));
 int				ft_error(const char *str);
+char			*ft_putnstr(const char *str, size_t n);
 
 /*
 ** STRINGS
@@ -39,6 +42,8 @@ unsigned long	ft_strlenc(const char *str, char c);
 char			*ft_strsub(char const *s, unsigned long start, unsigned long n);
 char			*ft_strncat(char *s1, const char *s2, unsigned long n);
 int				ft_strcountc(char const *str, char c);
+int				ft_findc(const char *str, char c);
+char			*ft_itoa(int n);
 char			**ft_strsplit(const char *str, char c);
 
 /*
