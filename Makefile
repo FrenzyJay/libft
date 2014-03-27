@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/27 06:20:22 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/27 13:04:16 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -28,6 +28,8 @@ SRCS =			strings/ft_strlen.c \
 				strings/ft_strcountc.c \
 				strings/ft_strdup.c \
 				strings/ft_strnew.c \
+				strings/ft_findc.c \
+				strings/ft_itoa.c \
 				memory/ft_bzero.c \
 				memory/ft_memset.c \
 				memory/ft_memalloc.c \
@@ -37,7 +39,9 @@ SRCS =			strings/ft_strlen.c \
 				io/ft_putstr.c \
 				io/ft_putchar.c \
 				io/ft_putnbr.c \
+				io/ft_printf.c \
 				io/ft_error.c \
+				io/ft_putnstr.c \
 				checks/ft_isprint.c
 
 OBJ =			$(SRCS:.c=.o)
