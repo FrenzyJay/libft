@@ -6,7 +6,7 @@
 #    By: jvincent <jvincent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:33:50 by jvincent          #+#    #+#              #
-#    Updated: 2014/03/26 02:35:49 by jvincent         ###   ########.fr        #
+#    Updated: 2014/03/27 01:42:11 by jvincent         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -27,7 +27,6 @@ SRCS =			strings/ft_strlen.c \
 				strings/ft_strcountc.c \
 				strings/ft_strdup.c \
 				strings/ft_strnew.c \
-				strings/ft_strsplit.c \
 				memory/ft_bzero.c \
 				memory/ft_memset.c \
 				memory/ft_memalloc.c \
